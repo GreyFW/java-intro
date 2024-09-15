@@ -154,6 +154,4 @@ public class Main {
         }
         System.out.println("Строка палиндром.");
     }
-
-
 } // конец класса Main
