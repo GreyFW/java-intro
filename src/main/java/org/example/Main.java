@@ -134,7 +134,27 @@ public class Main {
     }
 
     public static void task_five() {
+        Scanner scnr = new Scanner(System.in);
+
+        System.out.print("Введите строку для проверки на палиндром: ");
+        String input_str = scnr.nextLine();
+        int length = input_str.length();
+        int start, end;
+        int tmp = 0;
+
+        for (int i = 0; i < length / 2; i++) {
+            start = i;
+            end = length - i - 1;
+            char ltr_r = input_str.charAt(end);
+            char ltr_l = input_str.charAt(start);
+            if (ltr_r != ltr_r) {
+                System.out.println("Строка не палиндром.");
+                return;
+            }
+        }
+        System.out.println("Строка палиндром.");
 
     }
+
 
 } // конец класса Main
