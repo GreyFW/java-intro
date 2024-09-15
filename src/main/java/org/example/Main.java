@@ -7,7 +7,7 @@ public class Main {
         Scanner scnr = new Scanner(System.in);
 
         System.out.print("Введите номер задания: ");
-        int task_n = 0;
+        int task_n;
 
         if(scnr.hasNextInt()) {
             task_n = scnr.nextInt();
@@ -77,7 +77,7 @@ public class Main {
 
         Scanner scnr = new Scanner(System.in);
         System.out.println("Введите коэффициенты квадратного уравнения.");
-        double a_val = 0, b_val = 0, c_val = 0;
+        double a_val, b_val, c_val;
 
         System.out.print("a = ");
         if(scnr.hasNextDouble()) {
@@ -104,7 +104,7 @@ public class Main {
         }
 
         double D = b_val * b_val - 4 * a_val * c_val;
-        double root1 = 0, root2 = 0;
+        double root1, root2;
 
         if (D < 0) {
             System.out.println("Нет вещественных корней.");
@@ -119,7 +119,6 @@ public class Main {
             System.out.println("Первый корень = " + root1);
             System.out.println("Второй корень = " + root2);
         }
-
     }
 
     public static void task_four() {
