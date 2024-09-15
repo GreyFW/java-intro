@@ -13,6 +13,7 @@ public class Main {
             task_n = scnr.nextInt();
         } else {
             System.out.println("Некорректный ввод.");
+            return;
         }
 
         switch (task_n) {
@@ -73,6 +74,51 @@ public class Main {
     }
 
     public static void task_three() {
+
+        Scanner scnr = new Scanner(System.in);
+        System.out.println("Введите коэффициенты квадратного уравнения.");
+        double a_val = 0, b_val = 0, c_val = 0;
+
+        System.out.print("a = ");
+        if(scnr.hasNextDouble()) {
+            a_val = scnr.nextDouble();
+        } else {
+            System.out.println("Некорректный ввод.");
+            return;
+        }
+
+        System.out.print("b = ");
+        if(scnr.hasNextDouble()) {
+            b_val = scnr.nextDouble();
+        } else {
+            System.out.println("Некорректный ввод.");
+            return;
+        }
+
+        System.out.print("c = ");
+        if(scnr.hasNextDouble()) {
+            c_val = scnr.nextDouble();
+        } else {
+            System.out.println("Некорректный ввод.");
+            return;
+        }
+
+        double D = b_val * b_val - 4 * a_val * c_val;
+        double root1 = 0, root2 = 0;
+
+        if (D < 0) {
+            System.out.println("Нет вещественных корней.");
+        }
+        else if (D == 0) {
+            root1 = ( (-1) * b_val ) /  ( 2 * a_val );
+            System.out.println("Один корень = " + root1);
+        }
+        else {
+            root1 = ( (-1) * b_val + (Math.sqrt(D)) ) / ( 2 * a_val );
+            root2 = ( (-1) * b_val - (Math.sqrt(D)) ) / ( 2 * a_val );
+            System.out.println("Первый корень = " + root1);
+            System.out.println("Второй корень = " + root2);
+        }
 
     }
 
