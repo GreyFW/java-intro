@@ -138,16 +138,16 @@ public class Main {
 
         System.out.print("Введите строку для проверки на палиндром: ");
         String input_str = scnr.nextLine();
-        int length = input_str.length();
+        String formatted_str = input_str.replaceAll("[^a-zA-Z]", "").toLowerCase();
+        int length = formatted_str.length();
         int start, end;
-        int tmp = 0;
 
         for (int i = 0; i < length / 2; i++) {
             start = i;
             end = length - i - 1;
-            char ltr_r = input_str.charAt(end);
-            char ltr_l = input_str.charAt(start);
-            if (ltr_r != ltr_r) {
+            char ltr_r = formatted_str.charAt(end);
+            char ltr_l = formatted_str.charAt(start);
+            if (ltr_r != ltr_l) {
                 System.out.println("Строка не палиндром.");
                 return;
             }
