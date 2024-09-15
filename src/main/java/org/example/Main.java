@@ -49,10 +49,10 @@ public class Main {
             if ((i % 5 == 0) && (i % 7 == 0)) {
                 System.out.println("fizzbuzz");
             }
-            else if ((i % 5 == 0) && (i % 7 != 0)) {
+            else if (i % 5 == 0) {
                 System.out.println("fizz");
             }
-            else if ((i % 7 == 0) && (i % 5 !=0)) {
+            else if (i % 7 == 0) {
                 System.out.println("buzz");
             }
             else {
@@ -63,10 +63,11 @@ public class Main {
 
     public static void task_two() {
         String str = "make install";
-        String str_reversed = "";
         int length = str.length() - 1;
+
+        StringBuilder str_reversed = new StringBuilder();
         for (int i = length; i >= 0; i--) {
-            str_reversed += str.charAt(i);
+            str_reversed.append(str.charAt(i));
         }
         System.out.println(str_reversed);
     }
