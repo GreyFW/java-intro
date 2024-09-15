@@ -21,15 +21,19 @@ public class Main {
                 break;
             }
             case 2: {
+                task_two();
                 break;
             }
             case 3: {
+                task_three();
                 break;
             }
             case 4: {
+                task_four();
                 break;
             }
             case 5: {
+                task_five();
                 break;
             }
             default: {
@@ -42,14 +46,14 @@ public class Main {
     public static void task_one() {
 
         for (int i = 0; i <= 500; i++) {
-            if ((i % 5 == 0) && (i % 7 != 0)) {
+            if ((i % 5 == 0) && (i % 7 == 0)) {
+                System.out.println("fizzbuzz");
+            }
+            else if ((i % 5 == 0) && (i % 7 != 0)) {
                 System.out.println("fizz");
             }
             else if ((i % 7 == 0) && (i % 5 !=0)) {
                 System.out.println("buzz");
-            }
-            else if ((i % 5 == 0) && (i % 7 == 0)) {
-                System.out.println("fizzbuzz");
             }
             else {
                 System.out.println(i);
@@ -58,7 +62,13 @@ public class Main {
     }
 
     public static void task_two() {
-
+        String str = "make install";
+        String str_reversed = "";
+        int length = str.length() - 1;
+        for (int i = length; i >= 0; i--) {
+            str_reversed += str.charAt(i);
+        }
+        System.out.println(str_reversed);
     }
 
     public static void task_three() {
