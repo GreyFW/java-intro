@@ -122,7 +122,15 @@ public class Main {
     }
 
     public static void task_four() {
+        double yps = 1.0E-6, summa = 0.0, element;
+        int n = 2;
+        do {
+            element = 1.0 / ( n*n + n - 2);
+            n++;
+            summa += element;
+        } while (Math.abs(element) >= yps);
 
+        System.out.println("Сумма ряда = " + summa);
     }
 
     public static void task_five() {
