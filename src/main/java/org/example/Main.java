@@ -75,7 +75,7 @@ public class Main {
         return result;
     }
 
-    public static void task_two() {
+    public static String task_two() {
         String str = "make install";
         int length = str.length() - 1;
 
@@ -84,6 +84,8 @@ public class Main {
             str_reversed.append(str.charAt(i));
         }
         System.out.println(str_reversed);
+
+        return str_reversed.toString();
     }
 
     public static void task_three() {

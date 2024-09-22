@@ -1,46 +1,35 @@
 package org.example;
 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
-
 import org.junit.jupiter.api.Test;
+
+import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
-class MainTest {
+public class MainTest {
 
     @Test
-    void task_one() {
-        ByteArrayOutputStream output_stream = new ByteArrayOutputStream();
-        PrintStream primary_out = new PrintStream(output_stream);
-        System.setOut(primary_out);
+    public void Test_task_one() {
+        List<String> result = Main.task_one();
+        assertEquals(501, result.size());
 
-        Main.task_one(); // весь вывод метода запишется в output_stream
-
-        for (int i = 0; i <= 500; i++) {
-            if ((i % 5 == 0) && (i % 7 == 0)) {
-                System.out.println("fizzbuzz");
-            }
-            else if (i % 5 == 0) {
-                System.out.println("fizz");
-            }
-            else if (i % 7 == 0) {
-                System.out.println("buzz");
-            }
-            else {
-                System.out.println(i);
-            }
+        assertEquals("1", result.get(1));
+        assertEquals("fizzbuzz", result.get(35));
+        assertEquals("fizz", result.get(5));
+        assertEquals("buzz", result.get(7));
+        // проверили что каждая часть цикла работает корректно
         }
-
-        String fin_output = output_stream.toString();
-        System.out.println("....");
     }
 
     @Test
-    void task_two() {
+    public void Test_task_two() {
+    String result = Main.task_two();
+
+    assertEquals("llatsni ekam", result);
     }
 
     @Test
     void task_three() {
+
     }
 
     @Test
