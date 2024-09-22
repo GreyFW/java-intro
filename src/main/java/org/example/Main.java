@@ -69,6 +69,8 @@ public class Main {
             }
             case 5: {
                 System.out.println("Введите строку для проверки на палиндромность: ");
+                scnr.nextLine();
+                
                 String user_input = scnr.nextLine();
                 boolean result = task_five(user_input);
                 break;
