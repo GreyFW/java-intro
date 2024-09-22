@@ -68,7 +68,9 @@ public class Main {
                 break;
             }
             case 5: {
-                task_five();
+                System.out.println("Введите строку для проверки на палиндромность: ");
+                String user_input = scnr.nextLine();
+                boolean result = task_five(user_input);
                 break;
             }
             default: {
@@ -157,12 +159,9 @@ public class Main {
         return summa;
     }
 
-    public static void task_five() {
-        Scanner scnr = new Scanner(System.in);
+    public static boolean task_five(String input) {
 
-        System.out.print("Введите строку для проверки на палиндром: ");
-        String input_str = scnr.nextLine();
-        String formatted_str = input_str.replaceAll("[^a-zA-Z]", "").toLowerCase();
+        String formatted_str = input.replaceAll("[^a-zA-Z]", "").toLowerCase();
         int length = formatted_str.length();
         int start, end;
 
@@ -173,10 +172,11 @@ public class Main {
             char ltr_l = formatted_str.charAt(start);
             if (ltr_r != ltr_l) {
                 System.out.println("Строка не палиндром.");
-                return;
+                return false;
             }
         }
         System.out.println("Строка палиндром.");
+        return true;
     }
 
 }

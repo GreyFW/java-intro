@@ -50,6 +50,10 @@ public class MainTest {
 
     @Test
     void task_five() {
+
+        assertTrue(Main.task_five("A roza upala na lapu Azora"));
+
+        assertFalse(Main.task_five("weriojfowe121DFEWF"));
     }
 
 } // конец MainTest
