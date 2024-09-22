@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -19,7 +21,8 @@ public class Main {
 
         switch (task_n) {
             case 1: {
-                task_one();
+                List<String> answer = new ArrayList<>();
+                answer = task_one();
                 break;
             }
             case 2: {
@@ -45,22 +48,31 @@ public class Main {
         }
     }
 
-    public static void task_one() {
-
+    public static List<String> task_one() {
+        List<String> result = new ArrayList<>();
         for (int i = 0; i <= 500; i++) {
             if ((i % 5 == 0) && (i % 7 == 0)) {
+                result.add("fizzbuzz");
+
                 System.out.println("fizzbuzz");
             }
             else if (i % 5 == 0) {
+                result.add("fizz");
+
                 System.out.println("fizz");
             }
             else if (i % 7 == 0) {
+                result.add("buzz");
+
                 System.out.println("buzz");
             }
             else {
+                result.add(String.valueOf(i));
+
                 System.out.println(i);
             }
         }
+        return result;
     }
 
     public static void task_two() {
