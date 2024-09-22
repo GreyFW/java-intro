@@ -26,11 +26,41 @@ public class Main {
                 break;
             }
             case 2: {
-                task_two();
+                String answer;
+                answer = task_two();
                 break;
             }
             case 3: {
-                task_three();
+                System.out.println("Введите коэффициенты квадратного уравнения.");
+                double a_v, b_v, c_v;
+
+                System.out.print("a = ");
+                if(scnr.hasNextDouble()) {
+                    a_v = scnr.nextDouble();
+                } else {
+                    System.out.println("Некорректный ввод.");
+                    return;
+                }
+
+                System.out.print("b = ");
+                if(scnr.hasNextDouble()) {
+                    b_v = scnr.nextDouble();
+                } else {
+                    System.out.println("Некорректный ввод.");
+                    return;
+                }
+
+                System.out.print("c = ");
+                if(scnr.hasNextDouble()) {
+                    c_v = scnr.nextDouble();
+                } else {
+                    System.out.println("Некорректный ввод.");
+                    return;
+                }
+
+                String answer;
+                answer = task_three(a_v, b_v, c_v);
+
                 break;
             }
             case 4: {
@@ -88,51 +118,29 @@ public class Main {
         return str_reversed.toString();
     }
 
-    public static void task_three() {
-
-        Scanner scnr = new Scanner(System.in);
-        System.out.println("Введите коэффициенты квадратного уравнения.");
-        double a_val, b_val, c_val;
-
-        System.out.print("a = ");
-        if(scnr.hasNextDouble()) {
-            a_val = scnr.nextDouble();
-        } else {
-            System.out.println("Некорректный ввод.");
-            return;
-        }
-
-        System.out.print("b = ");
-        if(scnr.hasNextDouble()) {
-            b_val = scnr.nextDouble();
-        } else {
-            System.out.println("Некорректный ввод.");
-            return;
-        }
-
-        System.out.print("c = ");
-        if(scnr.hasNextDouble()) {
-            c_val = scnr.nextDouble();
-        } else {
-            System.out.println("Некорректный ввод.");
-            return;
-        }
+    public static String task_three(double a_val, double b_val, double c_val) {
 
         double D = b_val * b_val - 4 * a_val * c_val;
         double root1, root2;
 
         if (D < 0) {
             System.out.println("Нет вещественных корней.");
+
+            return ("Нет вещественных корней.");
         }
         else if (D == 0) {
             root1 = ( (-1) * b_val ) /  ( 2 * a_val );
             System.out.println("Один корень = " + root1);
+
+            return ("Один корень = " + root1);
         }
         else {
             root1 = ( (-1) * b_val + (Math.sqrt(D)) ) / ( 2 * a_val );
             root2 = ( (-1) * b_val - (Math.sqrt(D)) ) / ( 2 * a_val );
             System.out.println("Первый корень = " + root1);
             System.out.println("Второй корень = " + root2);
+
+            return ("Первый корень = " + root1 + ", второй корень = " + root2);
         }
     }
 
