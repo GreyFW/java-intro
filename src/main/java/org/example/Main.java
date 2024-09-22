@@ -64,7 +64,7 @@ public class Main {
                 break;
             }
             case 4: {
-                task_four();
+                double result = task_four();
                 break;
             }
             case 5: {
@@ -144,7 +144,7 @@ public class Main {
         }
     }
 
-    public static void task_four() {
+    public static double task_four() {
         double yps = 1.0E-6, summa = 0.0, element;
         int n = 2;
         do {
@@ -154,6 +154,7 @@ public class Main {
         } while (Math.abs(element) >= yps);
 
         System.out.println("Сумма ряда = " + summa);
+        return summa;
     }
 
     public static void task_five() {

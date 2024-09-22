@@ -42,6 +42,10 @@ public class MainTest {
 
     @Test
     void task_four() {
+        double result;
+
+        result = Main.task_four();
+        assertEquals(0.610112, result, 1.0E-6);
     }
 
     @Test
