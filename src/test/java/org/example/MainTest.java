@@ -34,10 +34,10 @@ public class MainTest {
         assertEquals("Нет вещественных корней.", result);
 
         result = Main.task_three(1, -4, 4);
-        assertEquals("Один корень = " + 2, result);
+        assertEquals("Один корень = " + 2.0, result);
 
         result = Main.task_three(1, 3, -4);
-        assertEquals("Первый корень = " + (-4) + ", второй корень = " + 1, result);
+        assertEquals("Первый корень = " + (1.0) + ", второй корень = " + -4.0, result);
     }
 
     @Test
