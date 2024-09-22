@@ -18,18 +18,26 @@ public class MainTest {
         assertEquals("buzz", result.get(7));
         // проверили что каждая часть цикла работает корректно
         }
-    }
 
     @Test
     public void Test_task_two() {
-    String result = Main.task_two();
+        String result = Main.task_two();
 
-    assertEquals("llatsni ekam", result);
+        assertEquals("llatsni ekam", result);
     }
 
     @Test
     void task_three() {
+        String result;
 
+        result = Main.task_three(1, -5, 9);
+        assertEquals("Нет вещественных корней.", result);
+
+        result = Main.task_three(1, -4, 4);
+        assertEquals("Один корень = " + 2, result);
+
+        result = Main.task_three(1, 3, -4);
+        assertEquals("Первый корень = " + (-4) + ", второй корень = " + 1, result);
     }
 
     @Test
@@ -39,4 +47,5 @@ public class MainTest {
     @Test
     void task_five() {
     }
-}
+
+} // конец MainTest
